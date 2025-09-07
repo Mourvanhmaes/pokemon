@@ -9,6 +9,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'game';
+    src: url('font/Games.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 *{
     margin: 0;
 }
@@ -176,23 +182,26 @@ main{
 header{
     background-color: var(--fundo2);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 0.5rem 5rem 0.5rem 5rem;
+    position: relative;
+    box-shadow: 0 4px 6px -1px var(--claro), 0 6px 15px -2px var(--claro);;
 }
-header h1{
-    font-family: 'Pokemon';
-    color: #FFDE00;
-    text-shadow: 
-    -2px -2px 0 rgb(61, 108, 185),
-     2px -2px 0 rgb(61, 108, 185),
-    -2px  2px 0 rgb(61, 108, 185),
-     2px  2px 0 rgb(61, 108, 185),
-     0px -2px 0 rgb(61, 108, 185),
-     0px  2px 0 rgb(61, 108, 185),
-    -2px  0px 0 rgb(61, 108, 185),
-     2px  0px 0 rgb(61, 108, 185);
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
-header nav{
+.logo h1{
+    color: var(--texto);
+    font-family: 'Nunito', sans-serif;
+}
+.logo img{
+    width: 2rem;
+    filter: invert(100%);
+}
+nav{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -200,10 +209,14 @@ header nav{
     font-family: 'Press Start 2P', cursive;
     font-size: 70%;
 }
-header nav a{
+nav a{
     color: var(--texto);
     text-decoration: none;
     color: var(--texto);
+}
+nav a:hover{
+    color: var(--contraste);
+    text-decoration: underline;
 }
 
 
