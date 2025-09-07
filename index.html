@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pokemon</title>
+</head>
+<body>
+    <header>
+        <h1>Pokemon</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="jogoPoke.html">Jogos</a>
+            <a href="#">Favoritos</a>
+        </nav>
+    </header>
+    <main>
+        <div class="inicio">
+            <h1 id="titulo">Pokémons</h1>
+            <h3>Explore o universo pokemon</h3>
+            <h3>Descubra, pesquise e conheça todos os Pokémons</h3>
+            <div class="barraPesquisa">
+                <input type="text" placeholder="Pesquise o nome ou ID do pokemon" id="pesquisa">
+                <img src="img/search.svg" alt="lupa" onclick="buscar()">
+            </div>
+        </div>
+        <div class="filtros">
+            <div class="elemento">
+                <select name="tipos" id="tipos">
+                    <option value="nada">— Selecione —</option>
+                    <option value="normal">Normal</option>
+                    <option value="fire">Fogo</option>
+                    <option value="water">Água</option>
+                    <option value="electric">Elétrico</option>
+                    <option value="grass">Grama</option>
+                    <option value="ice">Gelo</option>
+                    <option value="fighting">Lutador</option>
+                    <option value="poison">Veneno</option>
+                    <option value="ground">Terra</option>
+                    <option value="flying">Voador</option>
+                    <option value="psychic">Psíquico</option>
+                    <option value="bug">Inseto</option>
+                    <option value="rock">Pedra</option>
+                    <option value="ghost">Fantasma</option>
+                    <option value="dragon">Dragão</option>
+                    <option value="dark">Noturno</option>
+                    <option value="steel">Aço</option>
+                    <option value="fairy">Fada</option>
+                </select>
+                <button onclick="filtrar()">Filtrar</button>
+            </div>
+            <div class="setas">
+                <img src="img/seta_esquerda.svg" alt="esquerda" onclick="seta_menos()">
+                <h3 id="pagina">1 de 52</h3>
+                <img src="img/seta_direita.svg" alt="direira" onclick="seta_mais()">
+            </div>
+        </div>
+        <div class="lista" id="pokemon">
+        </div>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>

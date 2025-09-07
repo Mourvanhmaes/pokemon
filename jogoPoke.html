@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">index</a>
+    </header>
+    <main class="jogo">
+        <img src="img/volume-up.svg" alt="" onclick="musica()" class="som">
+        <h1>Quem é esse pokemon</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="pergunta">
+            <div class="poke" id="foto">
+            </div>
+            <div class="alter" id="alternativa" onclick="resposta">
+            </div>
+        </div>
+    </main>
+
+  <script>
+    const quem = new Audio('quempoke.mp3');
+    // const som = new Audio('audio/open.mp3');
+    let nome = null;
+    function gerar(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    async function buscarPokemon() {
+        let resposta = await fetch(`https://pokeapi.co/api/v2/pokemon/${gerar(1, 300)}`);
+        let dados = await resposta.json();
+  
+        let tipo = dados.types[0].type.name;
+        nome = dados.name;
+        document.getElementById("foto").innerHTML = `
+            <img src="${dados.sprites.front_default}" alt="${dados.name}">
+        `;
+        opcao();
+    }
+    async function opcao(){
+        let n = gerar(1, 4);
+        for(let i = 1;i < 5; i++){
+            if(n == i){
+                document.getElementById("alternativa").innerHTML += `
+                    <div class="op" onclick="resposta(${1})">
+                        <h3>${nome}</h3>
+                    </div>
+                `;
+            }
+            else{
+                let resposta = await fetch(`https://pokeapi.co/api/v2/pokemon/${gerar(1, 300)}`);
+                let dados = await resposta.json();
+                document.getElementById("alternativa").innerHTML += `
+                    <div class="op" onclick="resposta(${0})">
+                        <h3>${dados.name}</h3>
+                    </div>
+                `;  
+            }
+        }
+    }
+    function resposta(n){
+        if(n == 0){
+            alert("Errou");
+        }
+        else{
+            alert("Acertou");
+            location.reload();
+        }
+    }
+    function musica(){
+        quem.play();
+    }
+    buscarPokemon();
+  </script>
+</body>
+</html>

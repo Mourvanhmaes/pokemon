@@ -1,0 +1,254 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+@font-face {
+    font-family: 'Pokemon';
+    src: url('font/PokemonSolid.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    margin: 0;
+}
+:root{
+    --fundo: #0b1e3dd6;
+    --fundo2: #16325f;
+    --claro: #274a87;
+    --texto: #a3b8d9;
+    --contraste: #d49b7f;
+}
+main{
+    background-image: url(img/fundo.png);
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--texto);
+}
+.card img{
+    width: 7rem;
+}
+.card{
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    border: 2px solid var(--claro);     
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 2px 2px 5px var(--claro), 0 0 15px var(--claro);
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 70%;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background-color: var(--fundo);
+}
+.card:hover{
+    background-color: var(--fundo2);
+    box-shadow: 2px 2px 5px var(--contraste), 0 0 15px var(--contraste);
+}
+.card h6{
+    color: var(--contraste);
+}
+.tipo{
+    margin: 0.3rem;
+    display: flex;
+    gap: 1rem;
+}
+.tipo h5{
+    border: 1px solid white;
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+    background-color: var(--claro);
+    width: 3.5rem;
+    font-family: 'Nunito', sans-serif;
+}
+.lista{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 70rem;
+}
+.filtros{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 80%;
+    margin-bottom: 0.4rem;
+}
+.elemento{
+    padding-left: 3rem;
+}
+.elemento select{
+    border: 1px solid var(--texto);
+    background-color: var(--fundo2);
+    color: var(--texto);
+    color: var(--texto);
+    border-radius: 0.5rem;
+    font-size: 120%;
+    font-family: 'Nunito', sans-serif;
+    cursor: pointer;
+}
+.elemento button{
+    border: 1px solid var(--texto);
+    background-color: var(--claro);
+    color: var(--texto);
+    color: var(--texto);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    font-size: 110%;
+    padding: 0.2rem 1rem 0.2rem 1rem;
+}
+.elemento button:hover{
+    border: 1px solid var(--contraste);
+}
+.setas{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 0.3rem;
+    padding-right: 3rem;
+}
+.setas img{
+    filter: invert(100%);
+    width: 2rem;
+    cursor: pointer;
+}
+/* inicio */
+#titulo{
+    font-family: 'Pokemon';
+    font-size: 700%;
+    color: #FFDE00;
+    text-shadow: 
+    -5px -5px 0 rgb(61, 108, 185),
+     5px -5px 0 rgb(61, 108, 185),
+    -5px  5px 0 rgb(61, 108, 185),
+     5px  5px 0 rgb(61, 108, 185),
+     0px -5px 0 rgb(61, 108, 185),
+     0px  5px 0 rgb(61, 108, 185),
+    -5px  0px 0 rgb(61, 108, 185),
+     5px  0px 0 rgb(61, 108, 185);
+}
+.barraPesquisa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+.barraPesquisa img{
+    width: 2rem;
+    filter: invert(100);
+    cursor: pointer;
+}
+#pesquisa{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 40rem;
+    height: 2rem;
+    border-radius: 0.6rem;
+    background-color: var(--fundo2);
+    color: var(--texto);
+    border: 3px solid var(--texto);
+}
+
+/* header */
+header{
+    background-color: var(--fundo2);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header h1{
+    font-family: 'Pokemon';
+    color: #FFDE00;
+    text-shadow: 
+    -2px -2px 0 rgb(61, 108, 185),
+     2px -2px 0 rgb(61, 108, 185),
+    -2px  2px 0 rgb(61, 108, 185),
+     2px  2px 0 rgb(61, 108, 185),
+     0px -2px 0 rgb(61, 108, 185),
+     0px  2px 0 rgb(61, 108, 185),
+    -2px  0px 0 rgb(61, 108, 185),
+     2px  0px 0 rgb(61, 108, 185);
+}
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 70%;
+}
+header nav a{
+    color: var(--texto);
+    text-decoration: none;
+    color: var(--texto);
+}
+
+
+
+
+/* jogo */
+.jogo{
+    display: flex;
+    flex-direction: column;
+    height: 40rem;
+}
+.pergunta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+.poke img{
+    width: 25rem;
+    background-color: var(--fundo);
+    border: var(--claro) 3px solid;
+    border-radius: 3rem;
+    box-shadow: 2px 2px 5px var(--claro), 0 0 15px var(--claro);
+    padding: 2rem;
+}
+.som{
+    width: 5rem;
+    filter: invert(100%);
+    cursor: pointer;
+}
+.alter{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.op{
+    border: 3px solid black;
+    padding: 0.5rem;
+    width: 10rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    background-color: var(--fundo2);
+    box-shadow: 2px 2px 5px var(--contraste), 0 0 15px var(--contraste);
+}
+.op:hover{
+    background-color: var(--contraste);
+    color: black;
+}
