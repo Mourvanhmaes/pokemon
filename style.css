@@ -265,3 +265,61 @@ nav a:hover{
     background-color: var(--contraste);
     color: black;
 }
+
+/* pagina pokemon */
+
+.texto{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--fundo2);
+    box-shadow: 2px 2px 5px var(--claro), 0 0 15px var(--claro);
+    border-radius: 1rem;
+    padding: 2rem;
+    font-family: 'Nunito', sans-serif;
+    margin-top: 2rem;
+    width: 80%;
+}
+.poke_nome{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.poke_nome h1{
+    font-family: 'Press Start 2P', cursive;
+}
+.poke_nome span{
+    color: var(--contraste);
+    font-family: 'Nunito', sans-serif;
+}
+.poke_nome h3{
+    font-family: 'Nunito', sans-serif;
+    width: 6rem;
+    border: 3px solid var(--texto);
+    border-radius: 1rem;
+}
+.poke_img{
+    display: flex;
+}
+.poke_img img{
+    width: 30rem;
+    height: 30rem;
+}
+.tipos_pag{
+    display: flex;
+    gap: 1rem;
+}
+.dados{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+    padding:  7rem 1rem 1rem 5rem;
+}
+.info{
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+}
