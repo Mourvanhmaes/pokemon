@@ -19,14 +19,16 @@
     margin: 0;
 }
 :root{
-    --fundo: #0b1e3dd6;
-    --fundo2: #16325f;
+    --fundo: #0D001A;
+    --fundo2: #1F163D;
+    --fundo3: #2A1D51;
     --claro: #274a87;
     --texto: #a3b8d9;
     --contraste: #d49b7f;
+    --azul1: #6CEDED;
 }
 main{
-    background-image: url(img/fundo.png);
+    background-color: var(--fundo);
     min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -180,45 +182,59 @@ main{
 
 /* header */
 header{
-    background-color: var(--fundo2);
+    background-color: var(--fundo);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 0.5rem 5rem 0.5rem 5rem;
-    position: relative;
-    box-shadow: 0 4px 6px -1px var(--claro), 0 6px 15px -2px var(--claro);;
+    flex-direction: column;
 }
-.logo{
+.logo_header{
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
+    padding: 0.5rem;
 }
-.logo h1{
-    color: var(--texto);
-    font-family: 'Nunito', sans-serif;
+.logo_header img{
+    width: 8rem;
 }
-.logo img{
-    width: 2rem;
-    filter: invert(100%);
+header a{
+    text-decoration: none;
+}
+header h1{
+    font-family: 'Pokemon';
+    color: white;
+    font-size: 300%;
+    text-shadow: 
+    -2px -2px 0 var(--claro),
+     2px -2px 0 var(--claro),
+    -2px  2px 0 var(--claro),
+     2px  2px 0 var(--claro),
+     0px -2px 0 var(--claro),
+     0px  2px 0 var(--claro),
+    -2px  0px 0 var(--claro),
+     2px  0px 0 var(--claro);
+    margin-top: -8.3rem;
 }
 nav{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 70%;
+    justify-content: space-evenly;
+    width: 60rem;
 }
-nav a{
-    color: var(--texto);
+.nav_grupo{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 90%;
+}
+.nav_grupo a{
     text-decoration: none;
     color: var(--texto);
+    font-size: 120%;
 }
-nav a:hover{
+.nav_grupo a:hover{
     color: var(--contraste);
-    text-decoration: underline;
 }
-
 
 
 
@@ -267,59 +283,103 @@ nav a:hover{
 }
 
 /* pagina pokemon */
-
-.texto{
+.poke_id{
     display: flex;
-    flex-direction: column;
-    background-color: var(--fundo2);
-    box-shadow: 2px 2px 5px var(--claro), 0 0 15px var(--claro);
-    border-radius: 1rem;
-    padding: 2rem;
-    font-family: 'Nunito', sans-serif;
-    margin-top: 2rem;
-    width: 80%;
-}
-.poke_nome{
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
-.poke_nome h1{
+.poke_id img{
+    width: 4rem;
+}
+
+.poke_img img{
+    width: 25rem;
+    border: var(--azul1) 0.4rem solid;
+    border-radius: 3rem;
+}
+.poke_1{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
     font-family: 'Press Start 2P', cursive;
 }
-.poke_nome span{
-    color: var(--contraste);
-    font-family: 'Nunito', sans-serif;
+#poke_nome{
+    margin-top: 1rem;
 }
-.poke_nome h3{
-    font-family: 'Nunito', sans-serif;
-    width: 6rem;
-    border: 3px solid var(--texto);
-    border-radius: 1rem;
-}
-.poke_img{
+.poke_principal{
     display: flex;
+    gap: 10rem;
 }
-.poke_img img{
-    width: 30rem;
-    height: 30rem;
+/* poke_2 */
+.poke_2{
+    margin-top: 3rem;
 }
-.tipos_pag{
-    display: flex;
-    gap: 1rem;
-}
-.dados{
+.poke_tipo{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     text-align: left;
-    padding:  7rem 1rem 1rem 5rem;
+    font-family: 'Press Start 2P', cursive;
+    gap: 1rem;
+    border-radius: 2rem;
+    width: 35rem;
+    padding: 1rem;
+    background-color: var(--fundo2);
 }
-.info{
+.poke_tipo2{
     display: flex;
-    gap: 0.5rem;
-    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+}
+.poke_tipo2 h3{
+    border-radius: 0.8rem;
+    width: 7rem;
+    background-color: var(--contraste);
+    padding: 0.4rem;
+    color: white;
+    text-shadow: 
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black,
+     0px -1px 0 black,
+     0px  1px 0 black,
+    -1px  0px 0 black,
+     1px  0px 0 black;
+}
+.poke_4{
+    margin-top: 3rem;
+    font-family: 'Press Start 2P', cursive;
+    padding: 1rem;
+    background-color: var(--fundo2);
+    border-radius: 1rem;
+    width: 35rem;
+}
+.poke_4 h1{
+    background-color: var(--fundo3);
+    padding: 0.7rem;
+    border-radius: 1rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-top: -1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    font-size: 130%
+}
+
+.poke_4 h2{
+    padding: 1rem;
+    width: 33rem;
+    font-size: 130%
+}
+
+.poke_5{
+    background-color: var(--fundo2);
+    margin-top: 3rem;
+    width: 15rem;
+    margin-left: 20rem;
+    padding: 1rem;
+    border-radius: 1rem;
 }

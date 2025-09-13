@@ -109,7 +109,7 @@ async function abrir_pokemon(id){
     let dados = await resposta.json();
     let nome = dados.name;
     let tipos = dados.types.map(t => t.type.name);
-    let imagem = dados.sprites.front_default;
+    let imagem = dados.sprites.other['official-artwork'].front_default;
     let resposta2 = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}`);
     let altura = dados.height / 10;
     let peso = dados.weight / 10;

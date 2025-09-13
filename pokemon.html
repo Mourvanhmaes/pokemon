@@ -4,23 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
     <title>Pokemon</title>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="img/pokebola.png" alt="pokebola">
-            <h1>Pokemon</h1>
-        </div>
+        <a href="index.html">
+            <div class="logo_header">
+                <img src="img/pokeprimata.png" alt="pokeprimata">
+            </div>
+            <h1>PokePrimata</h1>
+        </a>
         <nav>
-            <a href="index.html">Início</a>
-            <a href="jogoPoke.html">Jogos</a>
-            <a href="#">Favoritos</a>
-            <a href="#"></a>
+            <div class="nav_grupo">
+                <a href="jogoPoke.html">Jogos</a>
+                <a href="#">Jogos</a>
+            </div>
+            <div class="nav_grupo">
+                <a href="#">Favoritos</a>
+                <a href="#">Times</a>
+            </div>
         </nav>
     </header>
-    <main id="pag_poke"></main>
+    <main id="pag_poke">
+        <!-- <div class="poke_principal">
+            <div class="poke_1">
+                <div class="poke_id">
+                    <img src="img/logo.png" alt="pokebola">
+                    <h1>#025</h1>
+                </div>
+                <div class="poke_img">
+                    <img src="img/pokemon.png" alt="pokemon">
+                </div>
+                <h1 id="poke_nome">Bulbasaur</h1>
+            </div>
+            <div class="poke_3">
+                <div class="poke_2">
+                    <div class="poke_tipo">
+                        <h1>TYPE/</h1>
+                        <div class="poke_tipo2">
+                            <h3>Eletrico</h3>
+                            <h3>Natural</h3>
+                    </div>
+                </div>
+                <div class="poke_4">
+                    <h1>habilitis</h1>
+                    <h2>xxxxxxxxxxx-xxxxxxxxxxxx</h2>
+                </div>
+                <div class="poke_5">
+                    <h3>HT   ㅤㅤㅤㅤ<span>1.09</span></h3>
+                    <h3>WT   ㅤㅤㅤㅤ<span>13,4</span></h3>
+                </div>
+            </div>
+             </div>
+        </div> -->
+    </main>
 </body>
 <script>
     window.onload = () => {
@@ -28,25 +66,34 @@
         let container = document.getElementById("pag_poke");
 
         container.innerHTML += `
-            <div class="texto">
-                <div class="poke_nome">
-                    <h1>${poke.nome}<span>(#${poke.id})</span></h1>
-                    <div class="tipos_pag">${poke.tipos.map(tipo => `<h3 class="${tipo}">${tipo}</h3>`).join("")}</div>
+            <div class="poke_principal">
+                <div class="poke_1">
+                    <div class="poke_id">
+                   <img src="img/logo.svg" alt="pokebola">
+                        <h1>#${poke.id}</h1>
+                    </div>
+                    <div class="poke_img">
+                        <img src="${poke.imagem}" alt="${poke.nome}">
+                    </div>
+                    <h1 id="poke_nome">${poke.nome}</h1>
                 </div>
-                <div class="poke_img">
-                    <img src="${poke.imagem}" alt="${poke.nome}">
-                    <div class="dados">
-                        <p class="descricao">${poke.descricao}</p>
-                        <div class="info">
-                            <h3>Altura: <span>${poke.altura} m</span></h3>
-                            <h3>Peso: <span>${poke.peso} kg</span></h3>
-                            <h3>Habilidade: <span>${poke.habilidades.join(", ")}</span></h3>    
-                        </div>
-                        <div class="moves">
-                            <h3>Movimentos:</h3>
-                            ${poke.movimentos.map(m => `<span>${m}</span>`).join(", ")}
+                <div class="poke_3">
+                    <div class="poke_2">
+                        <div class="poke_tipo">
+                            <h1>TYPE/</h1>
+                            <div class="poke_tipo2">
+                                ${poke.tipos.map(tipo => `<h3 class="${tipo}">${tipo}</h3>`).join("")}
                         </div>
                     </div>
+                    <div class="poke_4">
+                        <h1>habilitis</h1>
+                        <h2>${poke.habilidades.join(", ")}</h2>
+                    </div>
+                    <div class="poke_5">
+                        <h3>HT   ㅤㅤㅤㅤ<span>${poke.altura}</span></h3>
+                        <h3>WT   ㅤㅤㅤㅤ<span>${poke.peso}</span></h3>
+                    </div>
+                </div>
                 </div>
             </div>
         `;

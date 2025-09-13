@@ -9,22 +9,25 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="img/pokebola.png" alt="pokebola">
-            <h1>Pokemon</h1>
-        </div>
+        <a href="index.html">
+            <div class="logo_header">
+                <img src="img/pokeprimata.png" alt="pokeprimata">
+            </div>
+            <h1>PokePrimata</h1>
+        </a>
         <nav>
-            <a href="index.html">Início</a>
-            <a href="jogoPoke.html">Jogos</a>
-            <a href="#">Favoritos</a>
-            <a href="#"></a>
+            <div class="nav_grupo">
+                <a href="jogoPoke.html">Jogos</a>
+                <a href="#">Jogos</a>
+            </div>
+            <div class="nav_grupo">
+                <a href="#">Favoritos</a>
+                <a href="#">Times</a>
+            </div>
         </nav>
     </header>
     <main>
         <div class="inicio">
-            <h1 id="titulo">Pokémons</h1>
-            <h3>Explore o universo pokemon</h3>
-            <h3>Descubra, pesquise e conheça todos os Pokémons</h3>
             <div class="barraPesquisa">
                 <input type="text" placeholder="Pesquise o nome ou ID do pokemon" id="pesquisa">
                 <img src="img/search.svg" alt="lupa" onclick="buscar()">
