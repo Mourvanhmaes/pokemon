@@ -53,7 +53,7 @@
         let tipo = dados.types[0].type.name;
         nome = dados.name;
         document.getElementById("foto").innerHTML = `
-            <img src="${dados.sprites.front_default}" alt="${dados.name}">
+            <img src="${dados.sprites.other['official-artwork'].front_default}" alt="${dados.name}">
         `;
         opcao();
     }
