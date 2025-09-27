@@ -1,38 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokeprimata</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="m_header_home">
-            <a href="index.html">
-                <img src="img/logo_pokebola.svg" alt="logo">
-                <h1>POKEPRIMATA</h1>
-            </a>
-        </div>
-        <nav class="m_header_nav">
-            <a href="index.html" class="m_header_a">Inicio</a>
-            <a href="#" class="m_header_a">Times</a>
-            <a href="#" class="m_header_a  m_header_marcado">Pokémon</a>
-            <a href="#" class="m_header_a">Favoritos</a>
-            <a href="#" class="m_header_a">Jogos</a>
-        </nav>
-        <div class="m_header_direito">
-            <a href="#"><img src="img/lupa.svg" alt="lupa" class="m_header_lupa"></a>
-            <a href="#" class="m_header_botao_login">LOGIN</a>
-            <a href="#"><img src="img/menu.svg" alt="menu" class="m_header_menu"></a>
-        </div>
-    </header>
-    <main class="m_pag_poke">
+codigo pokemon original
         <div class="m_poke_titulo">
             <h2>Pokémon</h2>
         </div>
         <div class="m_poke_pricipal">
-            <img src="img/caret-left.svg" alt="seta esquerda" class="m_poke_setas" onclick="m_poke_antes()">
+            <img src="img/esquerda.svg" alt="seta esquerda" class="m_poke_setas">
             <div class="m_poke_pokemon">
                 <img src="img/master_ball.svg" alt="master_ball" class="m_poke_master">
                 <div class="m_poke_pokemon_img">
@@ -71,38 +42,32 @@
                     <img src="img/estrela_apagada.svg" alt="estrela_apagada">
                 </div>
             </div>
-            <img src="img/caret-right.svg" alt="seta direita" class="m_poke_setas" onclick="m_poke_prox()">
+            <img src="img/direita.svg" alt="seta direita" class="m_poke_setas">
         </div>
         <div class="m_poke_extras">
             <div class="m_poke_sequencia">
                 <div class="m_poke_seq_titulo">
                     <h1>Sequencia</h1>
-                    <div class="m_poke_extras_setas">
-                        <img src="img/caret-left.svg" alt="esquerda">
-                        <img src="img/caret-right.svg" alt="direita">
+                    <div>
+                        <img src="img/esquerda.svg" alt="esquerda">
+                        <img src="img/direita.svg" alt="direita">
                     </div>
                 </div>
                 <div class="m_poke_cards">
                     <div class="m_poke_card">
                         <img src="img/charizard.svg" alt="charizard">
-                        <div class="m_poke_card_des">
-                            <h3>Charizard</h3>
-                            <h4>#006</h4>
-                        </div>
+                        <h3>Charizard</h3>
+                        <h4>#006</h4>
                     </div>
                     <div class="m_poke_card">
                         <img src="img/charizard.svg" alt="charizard">
-                        <div class="m_poke_card_des">
-                            <h3>Charizard</h3>
-                            <h4>#006</h4>
-                        </div>
+                        <h3>Charizard</h3>
+                        <h4>#006</h4>
                     </div>
                     <div class="m_poke_card">
                         <img src="img/charizard.svg" alt="charizard">
-                        <div class="m_poke_card_des">
-                            <h3>Charizard</h3>
-                            <h4>#006</h4>
-                        </div>
+                        <h3>Charizard</h3>
+                        <h4>#006</h4>
                     </div>
                 </div>
             </div>
@@ -145,7 +110,5 @@
                 </div>
             </div>
         </div>
-    </main>
-</body>
-<script src="script.js"></script>
-</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------

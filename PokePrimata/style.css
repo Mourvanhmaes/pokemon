@@ -13,6 +13,8 @@
     --azul-botao: #14CDFF;
     --laranja_contraste: #d49b7f;
     --fundo_poke: #140D29;
+    /* fonts */
+    --mont: "Montserrat", sans-serif;
     /* cores do tipo */
     --normal: #A8A77A;
     --fire: #EE8130;
@@ -33,58 +35,7 @@
     --steel: #B7B7CE;
     --fairy: #D685AD;
 }
-.m_poke_tipo .m_normal{
-    background-color: var(--normal); 
-}
-.m_poke_tipo .m_fire{
-    background-color: var(--fire);
-}
-.m_poke_tipo .m_water{
-    background-color: var(--water); 
-}
-.m_poke_tipo .m_electric{ 
-    background-color: var(--electric); 
-}
-.m_poke_tipo .m_grass{ 
-    background-color: var(--grass); }
-.m_poke_tipo .m_ice { background-color: var(--ice); 
-}
-.m_poke_tipo .m_fighting{
-    background-color: var(--fighting); 
-}
-.m_poke_tipo .m_poison{
-    background-color: var(--poison); 
-}
-.m_poke_tipo .m_ground{
-    background-color: var(--ground); 
-}
-.m_poke_tipo .m_flying{
-    background-color: var(--flying); 
-}
-.m_poke_tipo .m_psychic{ 
-    background-color: var(--psychic); 
-}
-.m_poke_tipo .m_bug{ 
-    background-color: var(--bug); 
-}
-.m_poke_tipo .m_rock{ 
-    background-color: var(--rock); 
-}
-.m_poke_tipo .m_ghost{ 
-    background-color: var(--ghost); 
-}
-.m_poke_tipo .m_dragon{ 
-    background-color: var(--dragon); 
-}
-.m_poke_tipo .m_dark{ 
-    background-color: var(--dark); 
-}
-.m_poke_tipo .m_steel{ 
-    background-color: var(--steel); 
-}
-.m_poke_tipo .m_fairy{ 
-    background-color: var(--fairy); 
-}
+
 header{
     display: flex;
     align-items: center;
@@ -171,13 +122,14 @@ header{
     color: #444444;
     padding-top: 5rem;
     padding-left: 10rem;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--mont);
+    margin-left: -3rem;
 }
 .m_poke_pricipal{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4rem;
+    gap: 1rem;
 }
 .m_poke_pokemon{
     display: flex;
@@ -185,7 +137,7 @@ header{
     border-radius: 1rem;
     padding: 1rem;
     background-color: #162431;
-    font-family: "Montserrat", sans-serif;  
+    font-family: var(--mont);  
     gap: 2rem;
 }
 .m_poke_dados{
@@ -200,6 +152,12 @@ header{
     align-items: center;
     gap: 0.5rem;
     text-transform: uppercase;
+}
+.m_poke_nome h1{
+    width: 18rem;
+    white-space: nowrap;  
+    overflow: hidden;     
+    text-overflow: ellipsis;
 }
 .m_poke_nome h2{
     color: #C8C8C8;
@@ -303,6 +261,11 @@ header{
     color: var(--preto);
     font-weight: bold;
 }
+.m_poke_setas{
+    filter: invert(100);
+    width: 3rem;
+    cursor: pointer;
+}
 /* extra */
 .m_poke_extras{
     display: flex;
@@ -314,6 +277,7 @@ header{
 .m_poke_sequencia{
     display: flex;
     flex-direction: column;
+    font-family: var(--mont);
 }
 .m_poke_seq_titulo{
     display: flex;
@@ -330,12 +294,18 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
     justify-content: center;
     background-color: #FDA05B;
     border-radius: 1rem;
     height: 18rem;
     color: var(--branco);
     padding: 0.3rem;
+}
+.m_poke_card_des{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .m_poke_card img{
     width: 8rem;
@@ -345,6 +315,7 @@ header{
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    font-family: var(--mont);
 }
 .m_poke_evo_titulo{
     color: #444444;
@@ -380,4 +351,84 @@ header{
 .m_poke_evo_card .m_poke_tipo{
     align-items: center;
     justify-content: center;
+}
+.m_poke_extras_setas img{
+    filter: invert(100);
+    width: 1.5rem;
+}
+/* ---------------------------------index--------------------------- */
+.m_index{
+    background-color: #0A0A11;
+}
+.m_card{
+    background-color: #161B26;
+    border: 2px solid #7A7493;
+    border-radius: 1rem;
+    width: 10rem;
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.4rem;
+    font-family: var(--mont);
+}
+.m_card img{
+    width: 8rem;
+}
+
+/* cores do tipos */
+.m_poke_tipo .m_normal, .m_poke_cards .m_normal {
+    background-color: var(--normal);
+}
+.m_poke_tipo .m_fire, .m_poke_cards .m_fire {
+    background-color: var(--fire);
+}
+.m_poke_tipo .m_water, .m_poke_cards .m_water {
+    background-color: var(--water);
+}
+.m_poke_tipo .m_electric, .m_poke_cards .m_electric {
+    background-color: var(--electric);
+}
+.m_poke_tipo .m_grass, .m_poke_cards .m_grass {
+    background-color: var(--grass);
+}
+.m_poke_tipo .m_ice, .m_poke_cards .m_ice {
+    background-color: var(--ice);
+}
+.m_poke_tipo .m_fighting, .m_poke_cards .m_fighting {
+    background-color: var(--fighting);
+}
+.m_poke_tipo .m_poison, .m_poke_cards .m_poison {
+    background-color: var(--poison);
+}
+.m_poke_tipo .m_ground, .m_poke_cards .m_ground {
+    background-color: var(--ground);
+}
+.m_poke_tipo .m_flying, .m_poke_cards .m_flying {
+    background-color: var(--flying);
+}
+.m_poke_tipo .m_psychic, .m_poke_cards .m_psychic {
+    background-color: var(--psychic);
+}
+.m_poke_tipo .m_bug, .m_poke_cards .m_bug {
+    background-color: var(--bug);
+}
+.m_poke_tipo .m_rock, .m_poke_cards .m_rock {
+    background-color: var(--rock);
+}
+.m_poke_tipo .m_ghost, .m_poke_cards .m_ghost {
+    background-color: var(--ghost);
+}
+.m_poke_tipo .m_dragon, .m_poke_cards .m_dragon {
+    background-color: var(--dragon);
+}
+.m_poke_tipo .m_dark, .m_poke_cards .m_dark {
+    background-color: var(--dark);
+}
+.m_poke_tipo .m_steel, .m_poke_cards .m_steel {
+    background-color: var(--steel);
+}
+.m_poke_tipo .m_fairy, .m_poke_cards .m_fairy {
+    background-color: var(--fairy);
 }
